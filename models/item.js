@@ -13,7 +13,7 @@ module.exports = class Item {
         //path to the product.json file
         const dataPath = path.join(path.dirname(process.mainModule.filename),
         'data',
-        'product.json'        
+        'wish.json'        
         );
         fs.readFile(dataPath, (error, fileContent) => {
             let items = [];
@@ -35,7 +35,7 @@ module.exports = class Item {
     static fetchAllItems(callBack){
         const dataPath = path.join(path.dirname(process.mainModule.filename),
         'data',
-        'product.json'        
+        'wish.json'        
         );
 
         fs.readFile(dataPath, (error, fileContent) => {
