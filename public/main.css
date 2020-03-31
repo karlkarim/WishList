@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;600&display=swap');
 
 * {
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Baloo Thambi 2', cursive;
 }
 
 main {
@@ -17,15 +17,19 @@ main {
 
 .main-header {
   width: 100%;
-  height: 3.5rem;
-  background-color: #00695c;
-  padding: 0 1.5rem;
+  background: #0F2027;
+	background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+	background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  padding: 1.2rem 1.5rem;
 }
 
 .main-header__nav {
   height: 100%;
   display: flex;
   align-items: center;
+	justify-content: flex-end;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .main-header__item-list {
@@ -48,61 +52,64 @@ main {
 .main-header__item a:hover,
 .main-header__item a:active,
 .main-header__item a.active {
-  color: #ffeb3b;
+  color: #f5af19;
+}
+
+main > h1 {
+	text-align: center;
 }
 
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: stretch;
+  display: grid;
+	grid-template-columns: 1fr;
+	gap: 2rem;
+	max-width: 500px;
+	margin: 0 auto;
 }
 
-.card {
+.wish {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+	padding: .5rem;
 }
 
-.card__header,
-.card__content {
-  padding: 1rem;
+.wish p {
+	margin: 0;
 }
 
-.card__header h1,
-.card__content h1,
-.card__content h2,
-.card__content p {
-  margin: 0;
+.wish-form {
+	max-width: 20rem;
+	margin: 0 auto;
+	text-align: center;
 }
 
-.card__image {
-  width: 100%;
+.wish-form label {
+	display: block;
+	text-align: center;
+	margin-bottom: 1rem;
 }
 
-.card__image img {
-  width: 100%;
-}
-
-.card__actions {
-    padding: 1rem;
-    text-align: center;
-}
-
-.card__actions button,
-.card__actions a {
-    margin: 0 0.25rem;
+.wish-form input[type="text"] {
+	width: 100%;
+	padding: .5rem;
+	border-radius: .2rem;
+	border: 1px solid #223d47;
+	outline: none;
 }
 
 .btn {
   font: inherit;
-  border: 1px solid #00695c;
-  color: #00695c;
+  border: 1px solid #223d47;
+  color: #223d47;
   background: white;
   border-radius: 3px;
+	margin-top: 2rem;
   cursor: pointer;
+	transition: all ease-in-out .1s;
 }
 
 .btn:hover,
 .btn:active {
-  background-color: #00695c;
+  background-color: #223d47;
   color: white;
+	transition: all ease-in-out .1s;
 }
