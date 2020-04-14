@@ -73,7 +73,9 @@ main > h1 {
 }
 
 .wish p {
-	margin: 0;
+  margin: 0;
+  font-size: x-large;
+  font-weight: bold;
 }
 
 .wish-form {
@@ -112,4 +114,9 @@ main > h1 {
   background-color: #223d47;
   color: white;
 	transition: all ease-in-out .1s;
+}
+
+span {
+  cursor: pointer;
+  color: red;
 }

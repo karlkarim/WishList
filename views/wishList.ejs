@@ -1,20 +1,26 @@
 <%- include('includes/head.ejs') %>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 </head>
 
 <body>
         <%- include('includes/navigation.ejs') %>
-
+<script>
+    function deleteItem(itemID) {
+        $.post('/admin/remove-item/'+itemID);
+        location.reload();
+    }
+</script>
     <main>
         <h1>List of all them sweet Wishes</h1>
         
-        <% if(items.length > 0) { %>
+        <% if(newListItems.length > 0) { %>
         <div class="grid">
-            <% for(let item of items) { %>
+            <% for(let item of newListItems) { %>
 
 						<div class="wish">
 						
-							<p><%= item.title %></p>
-
+							<p><%= item.name %></p>
+                            <span onclick="deleteItem('<%= item._id %>')">Delete</span>
 						</div>
 
             <% } %>

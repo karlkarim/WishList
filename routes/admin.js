@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.get('/add-item', itemsController.getAddItemPage);
 router.post('/add-item', itemsController.postAddItems);
-
-module.exports = router;
+router.post('/remove-item/:id', itemsController.deleteATask);
+module.exports = router ;
 //exports.router = router;
 //exports.products = products;
