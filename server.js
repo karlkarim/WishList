@@ -1,10 +1,16 @@
 const express = require('express');
+// const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+require('./models/db');
+
 const path = require('path');
 const userRoute = require('./routes/wishList');
 const adminRoute = require('./routes/admin');
 const errorPage = require('./controllers/404');
 const app = express();
+
+
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
