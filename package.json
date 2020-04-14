@@ -17,6 +17,10 @@
   "bugs": {
     "url": "https://github.com/karlkarimoisa/WishList/issues"
   },
+  "engines": {
+    "node": "10.x"
+  },
+ 
   "homepage": "https://github.com/karlkarimoisa/WishList#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
