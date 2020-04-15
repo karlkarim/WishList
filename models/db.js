@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://kk9980587:mongodb@cluster0-by9y6.mongodb.net/wishlistDB', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://kasutaja:parool@cluster0-by9y6.mongodb.net/wishlistDB', { useNewUrlParser: true, useUnifiedTopology: true });
 require('./item');
 let db = mongoose.connection;
 
